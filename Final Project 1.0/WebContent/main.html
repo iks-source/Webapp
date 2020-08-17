@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Covid-19 hospital booking system</title>
+
+<style>
+
+			/* Nav Bar */
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://i.ibb.co/HBFqHNr/logo.png");
+
+  min-height: 350px;
+
+  /* Center and scale the image nicely */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+				/* Body */
+
+
+body {
+	background: linear-gradient(-45deg, #A4A1A0, #F0F8FF, #9dfae4, #B2FFFF);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+
+
+				/* Button */
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  width: 140px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+				/* Form */
+
+#form-content {
+            height: 200px;
+            width: 400px;
+            
+            margin-top:100px;
+            margin-left: 500px ;
+        }
+
+</style>
+
+</head>
+<body>
+
+	<div class="bg-img">
+	<div class="container">
+		<div class="topnav">
+		<a href="#home">Home</a>
+		<a href="login.jsp">Login</a>
+		
+		</div>
+	</div>
+	</div>
+<h1 align="center">Please fill in the symptoms that you have</h1>
+<div id ="form-content"  >
+	<form method="post" action="healthcheck">
+	
+  
+		<h4>Do you have difficulty breathing?</h4>
+		<input type="radio" id="br" name="br" value="yes">
+		<label for="br">Yes</label><br>
+		<input type="radio" id="br" name="br" value="no">
+		<label for="br">No</label><br>
+  
+		<h4>Do you have chest pain?</h4>
+		<input type="radio" id="cp" name="cp" value="yes">
+		<label for="cp">Yes</label><br>
+		<input type="radio" id="cp" name="cp" value="no">
+		<label for="cp">no</label><br>
+  
+		<h4>Is the patient facing loss of speech or movement??</h4>
+		<input type="radio" id="p" name="p" value="yes">
+		<label for="p">Yes</label><br>
+		<input type="radio" id="p" name="p" value="no">
+		<label for="p">No</label><br>
+  
+		<h4>Do you have dry cough or tiredness?</h4>
+		<input type="radio" id="dc" name="dc" value="yes">
+		<label for="dc">Yes</label><br>
+		<input type="radio" id="dc" name="dc" value="no">
+		<label for="dc">no</label><br>
+  
+		<h4>Do you have a fever: </h4>
+		<input type="radio" id="no" name="fever" value="no">
+		<label for="no">No</label><br>
+		<input type="radio" id="mild" name="fever" value="mild">
+		<label for="mild">Mild fever</label><br>
+		<input type="radio" id="high" name="fever" value="high">
+		<label for="high">High fever</label>
+  
+		<br><br>
+  
+		<input type="submit" name="submit" class="button" value="Check" />
+		<br><br>
+
+	</form>
+</div>
+</body>
+</html>
